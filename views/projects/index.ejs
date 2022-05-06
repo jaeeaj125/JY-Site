@@ -1,0 +1,26 @@
+<% layout('/layouts/boilerplate') %>
+    <h1>All Projects</h1>
+    <a href="/projects/new">New Projects</a>
+    <% for (project of projects) { %>
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4 bg-dark">
+                    <!-- <img src="..." class="img-fluid rounded-start" alt="..."> -->
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= project.name %>
+                        </h5>
+                        <p class="card-text text-muted"><small>
+                                <%= project.title %>
+                            </small></p>
+                        <p class="card-text">
+                            <%= project.description.substring(0, 200) %>...
+                        </p>
+                        <a href="/projects/<%= project._id %>" class="btn btn-primary">Read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% } %>

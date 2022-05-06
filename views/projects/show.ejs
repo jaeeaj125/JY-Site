@@ -1,0 +1,16 @@
+<% layout('/layouts/boilerplate') %>
+    <h1>
+        <%= project.name%>
+    </h1>
+    <h2>
+        <%= project.title%>
+    </h2>
+    <p>
+        <%= project.description%>
+    </p>
+    <a href="/projects/<%= project._id%>/edit">Edit</a>
+    <form action="/projects/<%= project._id%>?_method=DELETE" method="POST">
+        <button>Delete</button>
+    </form>
+
+    <a href="/projects">Back to all projects</a>

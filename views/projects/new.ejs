@@ -1,0 +1,18 @@
+<% layout('/layouts/boilerplate') %>
+    <form action="/projects" method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Project Name</label>
+            <input type="text" id="name" name="project[name]" class="form-control" autofocus>
+        </div>
+        <div class="mb-3">
+            <label for="title" class="form-label">Work Title</label>
+            <input type="text" id="title" name="project[title]" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="project[description]" id="description" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+
+        <button class="btn btn-success">Submit</button>
+    </form>
+    <a href="/projects" class="btn btn-danger my-3">Cancel</a>
